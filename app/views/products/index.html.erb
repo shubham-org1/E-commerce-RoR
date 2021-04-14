@@ -1,0 +1,15 @@
+<div class="banner--index">
+  <h1>Welcome to the Shopping App!</h1>
+</div>
+
+<div class="container m-5">
+  <% @products.each do |product| %>
+  <div class="product-card">
+    <p><%= product.name %></p>
+    <p><%= product.description %></p>
+    <p>£ <%= product.price.round %></p>
+    <%= link_to "Back to product lists", products_path, class: "btn btn-success
+    mb-5" %>
+  </div>
+  <% end %>
+</div>
